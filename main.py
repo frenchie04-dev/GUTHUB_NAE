@@ -455,5 +455,5 @@ Mr_Arthur = input("""
 you have been awoken, you have now gotten up and dresd as well as done all the nesasary things that you do in the morning. you have had breakfast you hav eto make another decigon do you
 1.) edge your bets and stay here and gather resorses.
 2.) hop in the car and get going 
-3.) head tot the neaqrest town and yoinke some supplies 
+3.) head to the neaqrest town and grab some supplies 
 """)
