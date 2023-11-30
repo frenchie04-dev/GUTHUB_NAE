@@ -457,3 +457,21 @@ you have been awoken, you have now gotten up and dresd as well as done all the n
 2.) hop in the car and get going 
 3.) head to the neaqrest town and grab some supplies 
 """)
+if Mr_Arthur == "1":
+  print("you decide to edge your bets and stay here im affraid the T-1000 finds you and it doesnt end well")
+  Player.statsmanager.update_stats("health -12") 
+  print(Player.statsmanager.get_stat("health"))
+elif Mr_Arthur == "2":
+  print("you have decided to hop in a car  and get going to see where the jerney would take you next you have escaped the T-1000 for now")
+  Player.statsmanager.update_stats("moral", +5)
+  print(Player.statsmanager.get_stat("moral")) 
+elif Mr_Arthur == "3":
+  print("you havwe decided to go to the nearest town and get some suplies but im am affraid you have gathered the supplied but the T-1000 has found you and made you skull byeconcave")
+  Player.statsmanager.update_stats("health -12") 
+  print(Player.statsmanager.get_stat("health"))
+Mr_johnson = input(""" 
+
+""")
+
+Mr_christian = input("""
+""")
