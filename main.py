@@ -455,7 +455,7 @@ Mr_Arthur = input("""
 you have been awoken, you have now gotten up and dresd as well as done all the nesasary things that you do in the morning. you have had breakfast you hav eto make another decigon do you
 1.) edge your bets and stay here and gather resorses.
 2.) hop in the car and get going 
-3.) head to the neaqrest town and grab some supplies 
+3.) head to the nearest town and grab some supplies 
 """)
 if Mr_Arthur == "1":
   print("you decide to edge your bets and stay here im affraid the T-1000 finds you and it doesnt end well")
@@ -466,10 +466,13 @@ elif Mr_Arthur == "2":
   Player.statsmanager.update_stats("moral", +5)
   print(Player.statsmanager.get_stat("moral")) 
 elif Mr_Arthur == "3":
-  print("you havwe decided to go to the nearest town and get some suplies but im am affraid you have gathered the supplied but the T-1000 has found you and made you skull byeconcave")
+  print("you have decided to go to the nearest town and get some suplies but im am affraid you have gathered the supplied but the T-1000 has found you and made you skull byeconcave")
   Player.statsmanager.update_stats("health -12") 
   print(Player.statsmanager.get_stat("health"))
-Mr_johnson = input(""" 
+  sleep(10)
+  clear()
+  
+Mr_johnson = input(""" you have escaped the T-1000 once again how much longer can you keep this up ? will you survive you next encounter ? 
 
 """)
 
