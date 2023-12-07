@@ -473,8 +473,20 @@ elif Mr_Arthur == "3":
   clear()
   
 Mr_johnson = input(""" you have escaped the T-1000 once again how much longer can you keep this up ? will you survive you next encounter ? 
-
+theres a fork in the road, no street signs to tell you wirtch fiork does what, whitch way do you choose?
+1.) right
+2.) left
 """)
-
+if Mr_johnson == '1':
+  print("im affraid you have chosen the right option")
+   Player.statsmanager.update_stats("moral", +2.5)
+  print(Player.statsmanager.get_stat("moral")) 
+else:
+print("im affraid you have chosen thew wrong option and the T-1000 has found you!")
+  Player.statsmanager.update_stats("health -15") 
+  print(Player.statsmanager.get_stat("health"))
+sleep(10)
+clear() 
 Mr_christian = input("""
+
 """)
