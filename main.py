@@ -495,7 +495,7 @@ theres a fork in the road, no street signs to tell you wirtch fiork does what, w
 """)
 if Mr_johnson == '1':
   print("im affraid you have chosen the right option")
-   Player.statsmanager.update_stats("moral", +2.5)
+Player.statsmanager.update_stats("moral", +2.5)
   print(Player.statsmanager.get_stat("moral")) 
 else:
 print("im affraid you have chosen thew wrong option and the T-1000 has found you!")
@@ -506,3 +506,4 @@ clear()
 Mr_christian = input("""
 
 """)
+print("some parts of this code was made by @TobezEdu I take no credit for those bits of code") 
