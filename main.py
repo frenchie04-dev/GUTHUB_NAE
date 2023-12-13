@@ -1,3 +1,19 @@
+def show_loading_screen():
+    term_name = "{frenchie04-dev NAE}"
+    print(Fore.GREEN + Style.BRIGHT +
+          f"Welcome [ {Fore.MAGENTA}{USER}{Fore.GREEN} ] to {term_name}")
+    width = 40
+    total = 100
+    interval = total / width
+    for i in range(width + 1):
+        progress = int(i * interval)
+        bar = '█' * i
+        stars = '=' * (width - i)
+        loading_text = f"[{bar}{stars}] {progress}%"
+        print(Fore.CYAN + loading_text, end='\r')
+        time.sleep(0.1)
+    print(Style.RESET_ALL)
+
 import os, time
 from colorama import Fore as col
 from time import sleep
