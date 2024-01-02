@@ -217,7 +217,7 @@ elif choice_2 == 2:
   time.sleep(2)
   clear()
 elif choice_2 == 3:
-  print("still doesnt end well i will finnish there for your sanity")
+  print("still doesnt end well I will finnish there for your sanity")
 Player.StatsManager.damage_player("health", -15)
 print(Player.StatsManager.get_stat("health"))  
 clear()
