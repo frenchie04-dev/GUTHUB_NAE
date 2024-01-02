@@ -1,3 +1,3 @@
 # GUTHUB_NAE
-@TOBEZDEV,FIX ME PLS, this may or may not be the bane of his exsitance 
-this wonderfull creastion of cod emay be the cause of death
+@TOBEZDEV, FIX ME PLS, this may or may not be the bane of his existence 
+this wonderful creation of code may be the cause of death
