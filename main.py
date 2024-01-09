@@ -11,7 +11,7 @@ else:
             USER = "User"
 
 def show_loading_screen():
-    term_name = "{frenchie04-dev NAE}"
+    term_name = "{frenchie04-dev GUTHUB_NAE}"
     print(Fore.GREEN + Style.BRIGHT +
           f"Welcome [ {Fore.MAGENTA}{USER}{Fore.GREEN} ] to {term_name}")
     width = 40
