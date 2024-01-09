@@ -1,9 +1,15 @@
 import os
 import os, time
+import datetime
+import random
+import string
+import time
+from colorama import Fore, Style
 from colorama import Fore as col
 from time import sleep
 from playsound import playsound
 from discord.ext import tasks
+
 
 skiploading = False
 if os.name in ["nt", "dos"]:
@@ -319,8 +325,6 @@ def loading(username):
     clear()
 
 loading(username)
-
-# you have loading defined and run twice?!
 
 #make text white again 
 
