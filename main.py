@@ -1,3 +1,10 @@
+import os
+import os, time
+from colorama import Fore as col
+from time import sleep
+from playsound import playsound
+from discord.ext import tasks
+
 skiploading = False
 if os.name in ["nt", "dos"]:
     USER = str(os.getlogin())
@@ -51,12 +58,6 @@ current_datetime = datetime.datetime.now()
 date_string = current_datetime.strftime("%d/%m/%Y")
 print(f"{Fore.MAGENTA}Run_id: {Fore.CYAN}{id}{Fore.MAGENTA}  Version: {Fore.CYAN}{Vir} {Fore.MAGENTA}Date: {Fore.CYAN}{day} / {date_string}")
 
-
-import os, time
-from colorama import Fore as col
-from time import sleep
-from playsound import playsound
-from discord.ext import tasks
 
 @tasks.loop(minutes=2, seconds=40)
 def track_loop():
