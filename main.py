@@ -1,3 +1,15 @@
+skiploading = False
+if os.name in ["nt", "dos"]:
+    USER = str(os.getlogin())
+elif os.name in ["posix"]:
+    USER = str(os.environ.get("REPL_OWNER"))
+else:
+    USER = str(os.environ.get("USERNAME"))
+    if USER == "None":
+        USER = str(os.path.expanduser("~"))
+        if USER == "None":
+            USER = "User"
+
 def show_loading_screen():
     term_name = "{frenchie04-dev NAE}"
     print(Fore.GREEN + Style.BRIGHT +
