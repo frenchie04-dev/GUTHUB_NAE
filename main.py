@@ -25,6 +25,32 @@ def show_loading_screen():
         print(Fore.CYAN + loading_text, end='\r')
         time.sleep(0.1)
     print(Style.RESET_ALL)
+if not skiploading:
+    show_loading_screen()
+current_datetime = datetime.datetime.now()
+day = current_datetime.isoweekday()
+
+if day == 1:
+    day = "Monday"
+elif day == 2:
+    day = "Tuesday"
+elif day == 3:
+    day = "Wednesday"
+elif day == 4:
+    day = "Thursday"
+elif day == 5:
+    day = "Friday"
+elif day == 6:
+    day = "Saturday"
+elif day == 7:
+    day = "Sunday"
+os.system('clear')
+acv = os.getcwd()
+id = ''.join(random.choices(string.ascii_letters + string.digits, k=5))
+current_datetime = datetime.datetime.now()
+date_string = current_datetime.strftime("%d/%m/%Y")
+print(f"{Fore.MAGENTA}Run_id: {Fore.CYAN}{id}{Fore.MAGENTA}  Version: {Fore.CYAN}{Vir} {Fore.MAGENTA}Date: {Fore.CYAN}{day} / {date_string}")
+
 
 import os, time
 from colorama import Fore as col
