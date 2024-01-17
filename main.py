@@ -112,19 +112,25 @@ print("your health is now", Player.StatsManager.get_stat("health"))
 print (" your moral is now", Player.StatsManager.get_stat("moral"))
 
 if Player.satsmanager.get_stat("health") <1:
-  print(col.RED + "I am affraid you have died to restarty just click the stop button in the middle of the screen and then the green run button. thank you for playing!")
+  print(col.RED + "I am affraid you have died!")
 exit()
-if Player.statsmanager.get_stat("moral") < 1:
-   print(col.RED + "I am affraid you have died to restarty just click the stop button in the middle of the screen and then the green run button. thank you for playing!")
+if Player.statsmanager.get_stat("moral") < 1: 
+    print(col.RED +"I'm afraid you have run out of moral and you have subsequently dies as a reslut!")
 exit()
 
 White = "\033[0;37m"  
 Orange = "\033[0;33m"
 
+Random_intervention = input("""
+Have you watched The terminator films? y/n
+""")
+if Random_intervention == "y" or "Y"
+    print("ok good so you should know what you are doing then")
+else:
+    print("hmm,ok. it doesnt affect the game play but if you have watched it then you will know what is ahead")
+
 username = input("What would you like your username to be? Please avoid capital letters: ").lower()
 print("Your username is" ,username)
-
-  #make text orange
 
 def loading(username):
   for i in range(4):
@@ -149,7 +155,6 @@ loading(username)
 
 clear()
 
-# make text white
 
 print({col.white}, "Hello", username, "! Welcome to the game!," ,{col.white})
 print("Welcome to my text-based adventure game.")
@@ -173,8 +178,7 @@ elif difficulty == '8':
   print("The easy one!")
 elif difficulty == '9':
   print("I'm sorry you fancied a challenge but that's not how this game works.")
-
-
+    
 sleep(2)
 clear()
 
@@ -184,39 +188,13 @@ if start.lower() == "yes" or start.lower() == "y":
 else:
   print("Interesting.")
 print("your health is",health)
-spawn = input("""
-Where would you like to spawn? Choose a location:
-1. Airport
-2. Some random kid's house
-3. Hospital
-4. The end of the game\n""")
-
-if spawn[0] == "1" or spawn.lower() == "airport":
-  print("Okay, you are at this deactivated airport. There are many planes surrounding you!")
-  time.sleep(2)
-elif spawn == "2" or spawn.lower() == "some random kid's house":
-  print("You wake up after what felt like the best night's sleep you have ever had. You realize that it's not your bed and you can tell by the fact that it has a hammock opposite it and is full of soft toys.")
-  time.sleep(2)
-elif spawn == "3" or spawn.lower() == "hospital":
-  print("You spawn in a hospital waste room. You make your way out miraculously with a few mere scratches - missing limbs. ?")
-  time.sleep(5)
-elif spawn == "4" or spawn.lower() == "the end of the game":
-  print("yeah not gonna work")  
-  Player.StatsManager.damage_player("health", -90)
-time.sleep(2)
-print("your health is now", Player.StatsManager.get_stat("health"))
-clear()
-time.sleep(2)
-print("you see a bright light you have been blinded for a few seconds ")
-time.sleep(2)
-clear()
-time.sleep(2)
 
 print("you see a strange humonoide shape kneeling down")
 choice_1 = input("""
 1.) do you go and greet them 
 2.) do you search arround and look for a weapon 
-3.) do you try and run away\n""")
+3.) do you try and run away
+""")
 
 if choice_1 == "1":
   print("you go up to meet them, im affraid it doesnt end well")
@@ -249,7 +227,8 @@ choice_2 = input("""
 what do you want to do ?
 1.) try your luck and see if THE TERMINATOR will actualy go to your house
 2.) set a trap for him 
-3.)take him on in a 1v1\n""")
+3.)take him on in a 1v1
+""")
 
 if choice_2 == 1:
   print("yeah once again it doesnt end well for you i shal save you the time")
@@ -272,12 +251,11 @@ trap = input("""
 what kind of trap do you want to set up?
 1.) exsplode the living day lights out of him
 2.) make him fall into a hole 
-3.) make him fall into some molten metal""")
+3.) make him fall into some molten metal
+""")
 
 if trap == 1:
-  print(
-   "well done you removed an arm and then he throws the arm at you pentrating your skull")
-
+  print("well done you removed an arm and then he throws the arm at you pentrating your skull")
   Player.StatsManager.damage_player("health", -10)
   print(Player.StatsManager.get_stat("health"))  
 
@@ -288,12 +266,13 @@ elif trap == 2:
   Player.StatsManager.damage_player("health", -18)
   print(Player.StatsManager.get_stat("health"))
   clear()
+    
 elif trap == 3:
   print("well done you survived level one")
 clear()
 
 print("time for level 2")
-lvl2_backstory = ("they people form the futer have sent down a nother terminator but this time it is more advansed and upgraded.")
+lvl2_backstory = ("they people form the futer have sent down a nother terminator but this time it is more advanced and upgraded.")
 print(lvl2_backstory)
 print ("your current health is", health )
 start = input("Would you like to start level 2? (y/n)")
@@ -303,32 +282,28 @@ else:
   print("Interesting.")
 clear()
 
-#make text orange again 
-
 def loading(username):
   for i in range(4):
-    print(f"{col.LIGHTYELLOW_EX}Hello, {username}! Please wait while the game finishes loading.")
+    print(f"{col.orange}Hello, {username}! Please wait while the game finishes loading.")
     print("Loading   |")
     time.sleep(0.60)
     clear()
-    print(f"{col.LIGHTYELLOW_EX}Hello, {username}! Please wait while the game finishes loading.")
+    print(f"{col.orange}Hello, {username}! Please wait while the game finishes loading.")
     print("Loading   /")
     time.sleep(0.60)
     clear()
-    print(f"{col.LIGHTYELLOW_EX}Hello, {username}! Please wait while the game finishes loading.")
+    print(f"{col.orange}Hello, {username}! Please wait while the game finishes loading.")
     print("Loading   -")
     time.sleep(0.60)
     clear()
-    print(f"{col.LIGHTYELLOW_EX}Hello, {username}! Please wait while the game finishes loading.")
+    print(f"{col.orange}Hello, {username}! Please wait while the game finishes loading.")
     print("Loading   \\")
     time.sleep(0.60)
     clear()
 
 loading(username)
 
-#make text white again 
-
-lvl2_choice = input("""
+lvl2_choice = input({col.white}"""
 what would ytou like to do ?
 1.) go hunting for the new veriant of the terminators
 2.) wait for the terminator to find you
@@ -359,7 +334,7 @@ would you like to :
 3.) check your supplies
 """)
 if ybot == 1:
-  print("welldone",username,"you have chosen the best option")
+  print("well done",username,"you have chosen the best option")
 elif ybot == 2:
   print("yeah not the best option as he finds you and ends you and your team")
   Player.StatsManager.damage_player("health", -26)
@@ -372,7 +347,7 @@ print("""
 you have gathered a team who all want the same as you and you gather your suplies and make for the chopper
 """)
 clear()
-erm = input("""you have gatherd your supplies and headed to previouse terminator strikes to see what kind of machine you are up against what would you like to do ?
+erm = input("""you have gathered your supplies and headed to previous terminator strikes to see what kind of machine you are up against what would you like to do ?
 1.) record all the data and then plan an attack from this information 
 2.) record the information and try and intercept his next attack
 3.) record how he attcks and try and find his weaknesess 
