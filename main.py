@@ -513,7 +513,7 @@ There is a fork in the road, no street signs to tell you which fork does what, w
 """)
 
 if Mr_johnson == '1':
-print("im affraid you have chosen the right option")
+    print("im affraid you have chosen the right option")
 Player.statsmanager.update_stats("moral", +2.5)
 print(Player.statsmanager.get_stat("moral")) 
 else:
@@ -524,7 +524,23 @@ print(Player.statsmanager.get_stat("health"))
 sleep(10)
 clear() 
 Mr_christian = input(""" 
-
+you have managed to escape the T-1000 so far you have proved to be a formidable force, you and the T-100 have worked well as a team! 
+you are feeling rather hungry and tiered you can either:
+1.) go to a motel and rest well as well as have a nice breakfast/dinner to help you on your journey.
+2.) you can take shifts to look after you your mum and the T-100 you will each take turns to sleep and then rotate to be on guard. 
+what will you chose 1 or 2 ?
 """)
+if Mr_christian == '1':
+    print("you have chosen the comfortable option, it has paid off well")
+Player.statsmanager.update_stats("health +22")
+print(Player.statsmanager.get_stat("health")) 
+Player.statsmanager.update_stats("moral +2")
+print(Player.statsmanager.get_stat("moral")) 
+else:
+    print("im affraid you have chsen the wrong option and you oversleep and the T-1000 finds you")
+Player.statsmanager.update_stats("health -26") 
+print(Player.statsmanager.get_stat("health"))
+Player.statsmanager.update_stats("moral -13")
+print(Player.statsmanager.get_stat("moral"))
 print("some parts of this code was made by @TobezEdu I take no credit for those bits of code") 
 print("Help me Toby wan Kenobi") 
