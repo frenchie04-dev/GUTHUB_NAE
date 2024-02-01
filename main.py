@@ -10,61 +10,6 @@ from time import sleep
 from playsound import playsound
 from discord.ext import tasks
 
-
-skiploading = False
-if os.name in ["nt", "dos"]:
-    USER = str(os.getlogin())
-elif os.name in ["posix"]:
-    USER = str(os.environ.get("REPL_OWNER"))
-else:
-    USER = str(os.environ.get("USERNAME"))
-    if USER == "None":
-        USER = str(os.path.expanduser("~"))
-        if USER == "None":
-            USER = "User"
-
-def show_loading_screen():
-    term_name = "{frenchie04-dev GUTHUB_NAE}"
-    print(Fore.GREEN + Style.BRIGHT +
-          f"Welcome [ {Fore.MAGENTA}{USER}{Fore.GREEN} ] to {term_name}")
-    width = 40
-    total = 100
-    interval = total / width
-    for i in range(width + 1):
-        progress = int(i * interval)
-        bar = '█' * i
-        stars = '=' * (width - i)
-        loading_text = f"[{bar}{stars}] {progress}%"
-        print(Fore.CYAN + loading_text, end='\r')
-        time.sleep(0.1)
-    print(Style.RESET_ALL)
-if not skiploading:
-    show_loading_screen()
-current_datetime = datetime.datetime.now()
-day = current_datetime.isoweekday()
-
-if day == 1:
-    day = "Monday"
-elif day == 2:
-    day = "Tuesday"
-elif day == 3:
-    day = "Wednesday"
-elif day == 4:
-    day = "Thursday"
-elif day == 5:
-    day = "Friday"
-elif day == 6:
-    day = "Saturday"
-elif day == 7:
-    day = "Sunday"
-os.system('clear')
-acv = os.getcwd()
-id = ''.join(random.choices(string.ascii_letters + string.digits, k=5))
-current_datetime = datetime.datetime.now()
-date_string = current_datetime.strftime("%d/%m/%Y")
-print(f"{Fore.MAGENTA}Run_id: {Fore.CYAN}{id}{Fore.MAGENTA}  Version: {Fore.CYAN}{Vir} {Fore.MAGENTA}Date: {Fore.CYAN}{day} / {date_string}")
-
-
 @tasks.loop(minutes=2, seconds=40)
 def track_loop():
   playsound("okmusi-mac.mp3")
@@ -426,12 +371,12 @@ print(Player.statmanager.get_stat("moral"))
 
 clear()
 sleep(10)
-print("you have managed to shake the T-1000 off of your tail tempararaley, you do not have enought fule to go you will hav e to make a vital decigion that will determin you survival.")
+print("you have managed to shake the T-1000 off of your tail tempararaley, you do not have enought fule to go you will have to make a vital decigion that will determin you survival.")
 sleep(10)
 clear()
 
 fule_crisis = input("""
-You do not have enogut fule to last ypou the journey ahead of you. You can either:
+You do not have enogut fule to last you the journey ahead of you. You can either:
 1.) hijack another vechile 
 2.) get some petrol 
 """)
@@ -482,7 +427,7 @@ elif variable_name == "3":
   print(Player.statsmanager.get_stat("moral"))
   sleep(10)
   clear()
-print("you have woken up to the sound of the T-100 shouting at you to get your backside out of bed as he wants to get moving again")
+print("you have woken up to the sound of the T-800 shouting at you to get your backside out of bed as he wants to get moving again")
 sleep(10)
 clear()
 Mr_Arthur = input("""
