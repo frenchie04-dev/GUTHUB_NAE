@@ -1,8 +1,4 @@
 import os
-import os, time
-import datetime
-import random
-import string
 import time
 from colorama import Fore, Style
 from colorama import Fore as col
