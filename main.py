@@ -99,7 +99,16 @@ clear()
 
 print({col.white}, "Hello", username, "! Welcome to the game!," ,{col.white})
 print("Welcome to my text-based adventure game.")
-print("You're the last human left after John Connor was unable to stop Judgment Day! you are now being hunted by an efficant killing machine se world from jugment day")
+print("you will be playing the role of john connor")
+print("""
+The future has not been written. There is no fate but what we make for ourselves. I wish I could believe that. My name is John Connor, they tried to murder me before I was born, when I was 13, they tried again. Machines from the future...Terminators. All my life my mother told me the storm was coming, Judgment Day, the beginning of the war between man and machines. Three billion lives would vanish in an instant,.
+you are now being hunted by an efficant killing machine from jugment day
+All right, listen. The Terminator’s an infiltration unit: part man, part machine. Underneath, it’s a hyperalloy combat chassis, microprocessor-controlled. Fully armoured; very tough. But outside, it's living human tissue: flesh, skin, hair, blood - grown for the cyborgs
+The 600 series had rubber skin. We spotted them easy, but these are new. They look human... sweat, bad breath, everything. Very hard to spot.
+In three years, Cyberdyne will become the largest supplier of military computer systems. All stealth bombers are upgraded with Cyberdyne computers, becoming fully unmanned. Afterwards, they fly with a perfect operational record. The Skynet Funding Bill is passed. The system goes online August 4th, 1997. Human decisions are removed from strategic defence. Skynet begins to learn at a geometric rate. It becomes self-aware at 2:14 a.m. Eastern time, August 29th. In a panic, they try to pull the plug.
+Skynet fights back.”
+'Judgement Day'.
+""")
 difficulty = input("""
 Please select your difficulty:
 1. Too easy
@@ -213,7 +222,9 @@ elif trap == 3:
 clear()
 
 print("time for level 2")
-lvl2_backstory = ("they people form the futer have sent down a nother terminator but this time it is more advanced and upgraded.")
+lvl2_backstory = ("""
+they people form the futer have sent down a nother terminator but this time it is more advanced and upgraded.
+""")
 print(lvl2_backstory)
 print ("your current health is", health )
 start = input("Would you like to start level 2? (y/n)")
@@ -243,7 +254,7 @@ def loading(username):
     clear()
 
 loading(username)
-
+print("I would lead what was left of the human race to ultimate victory.It hasn’t happened, no bombs fell, computers didn’t take control, we stopped Judgment Day.")
 lvl2_choice = input({col.white}"""
 what would ytou like to do ?
 1.) go hunting for the new veriant of the terminators
@@ -344,12 +355,15 @@ Player.statmanager.update_stats("moral", - 12 - 54)
 print(Player.statmanager.get_stat("moral"))
 clear ()
 sleep(10)
+
 print("HAND OVER OF TEACHERS MAY BE DIRECTLY LINKED TO DETERIATION OF WORK")
 sleep(20)
+
 print("if you are still hear good on ya it may get worse fyi ")
 Player.StatsManager.update_stat("health", +0.3)
 print(Player.StatsManager.get_stat("health"))
 clear()
+
 feedback = input("""
 the T-1000 is now chasing you in a stolen helicopter would you like to 
 1.) try and drive away
@@ -423,9 +437,11 @@ elif variable_name == "3":
   print(Player.statsmanager.get_stat("moral"))
   sleep(10)
   clear()
+
 print("you have woken up to the sound of the T-800 shouting at you to get your backside out of bed as he wants to get moving again")
 sleep(10)
 clear()
+
 Mr_Arthur = input("""
 you have been awoken, you have now gotten up and dresd as well as done all the nesasary things that you do in the morning. you have had breakfast you hav eto make another decigon do you
 1.) edge your bets and stay here and gather resorses.
@@ -452,20 +468,19 @@ There is a fork in the road, no street signs to tell you which fork does what, w
 1.) right
 2.) left
 """)
-
 if Mr_johnson == '1':
     print("im affraid you have chosen the right option")
 Player.statsmanager.update_stats("moral", +2.5)
 print(Player.statsmanager.get_stat("moral")) 
 else:
-print("im affraid you have chosen thew wrong option and the T-1000 has found you!")
+  print("im affraid you have chosen thew wrong option and the T-1000 has found you!")
 Player.statsmanager.update_stats("health -15") 
 print(Player.statsmanager.get_stat("health"))
-
 sleep(10)
 clear() 
+
 Mr_christian = input(""" 
-you have managed to escape the T-1000 so far you have proved to be a formidable force, you and the T-100 have worked well as a team! 
+you have managed to escape the T-1000 so far you have proved to be a formidable force, you and the T-800 have worked well as a team! 
 you are feeling rather hungry and tiered you can either:
 1.) go to a motel and rest well as well as have a nice breakfast/dinner to help you on your journey.
 2.) you can take shifts to look after you your mum and the T-100 you will each take turns to sleep and then rotate to be on guard. 
@@ -483,5 +498,42 @@ Player.statsmanager.update_stats("health -26")
 print(Player.statsmanager.get_stat("health"))
 Player.statsmanager.update_stats("moral -13")
 print(Player.statsmanager.get_stat("moral"))
-print("some parts of this code was made by @TobezEdu I take no credit for those bits of code") 
-print("Help me Toby wan Kenobi") 
+clear()
+
+print("I have not watched the Terminator films in a while so this may no longer start to follow the story")
+clear()
+
+Mr_Warwick = ("""
+A radom person walks up to you on the street and says to you,'I know what you are going through I can help you',
+What would you like to do ?
+1.) Trust them. 
+2.) Don't trust them andc walk away.
+3.) Knock them unconscious and run.
+your answer: 
+""")
+if Mr_Warwick == '1':
+  print("You have chosen to ignore your gut feeling and trust them",time.sleep(5),"it doesn't work out they knock you out unconscious and robe you of all your belongings")
+  Player.statsmanager.update_stats("health -26") 
+print(Player.statsmanager.get_stat("health"))
+Player.statsmanager.update_stats("moral -13")
+print(Player.statsmanager.get_stat("moral"))
+elif Mr_Warwick == '2':
+  print("you have decided to not trust them well done," username,"you have chosen the correct option but they still chase after you claming they can help")
+Player.statsmanager.update_stats("moral -3.25")
+print(Player.statsmanager.get_stat("moral"))
+clear()
+elif Mr_Warwick == '3':
+  print("well done,"username,"you knock the sucker out unconscious and you breake his nose while doing so as a result you have hurt your hand but it is worth it as you gain some cash.")
+Player.statsmanager.update_stats("health -5") 
+print(Player.statsmanager.get_stat("health"))
+Player.statsmanager.update_stats("moral +23")
+print(Player.statsmanager.get_stat("moral"))
+clear()
+Mrs_Hatter= ("""your body has produced some adrenalin and you want to shout something do you shout
+1.) yippie ki aye mother f***er
+2.) cowabunga
+
+""")
+print("some parts of this code was made by @Tobezdev I take no credit for those bits of code") 
+print("Help me Toby wan Kenobi your my only hope")
+print("if you understand the majority of the quote you have had a priviliged life!") 
