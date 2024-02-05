@@ -65,7 +65,7 @@ Orange = "\033[0;33m"
 Random_intervention = input("""
 Have you watched The terminator films? y/n
 """)
-if Random_intervention == "y" or "Y"
+if Random_intervention == "y" or "Y":
     print("ok good so you should know what you are doing then")
 else:
     print("hmm,ok. it doesnt affect the game play but if you have watched it then you will know what is ahead")
