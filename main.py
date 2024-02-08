@@ -532,7 +532,6 @@ clear()
 Mrs_Hatter= ("""your body has produced some adrenalin and you want to shout something do you shout
 1.) yippie ki aye mother f***er
 2.) cowabunga
-
 """)
 print("some parts of this code was made by @Tobezdev I take no credit for those bits of code") 
 print("Help me Toby wan Kenobi your my only hope")
