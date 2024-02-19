@@ -95,7 +95,6 @@ loading(username)
 
 clear()
 
-
 print({col.white}, "Hello", username, "! Welcome to the game!," ,{col.white})
 print("Welcome to my text-based adventure game.")
 print("you will be playing the role of john connor")
@@ -108,6 +107,7 @@ In three years, Cyberdyne will become the largest supplier of military computer 
 Skynet fights back.”
 'Judgement Day'.
 """)
+
 difficulty = input("""
 Please select your difficulty:
 1. Too easy
@@ -150,13 +150,16 @@ if choice_1 == "1":
   Player.StatsManager.damage_player("health", -10)
   print(Player.StatsManager.get_stat("health"))
   time.sleep(2)
+  
 elif choice_1 == "2":
   print("the only weapon you find is a bent rusty shovel")
   attack = input("do you go and hit them with the ruty bent shovel? y/n")
+  
   if attack == "y":
     print("i mean what did you exspect that you where going to own them with a shovel, no it crumbles as soon as you hit him ill stop there it didnt end well")
     time.sleep(2)
     clear()
+    
     Player.StatsManager.damage_player("health", -15)
     print(Player.StatsManager.get_stat("health"))
   else:
@@ -185,10 +188,12 @@ if choice_2 == 1:
   print(Player.StatsManager.get_stat("health"))  
   clear()
   time.sleep(2)
+  
 elif choice_2 == 2: 
   print("well done", username, "you have chosen the correct option")
   time.sleep(2)
   clear()
+  
 elif choice_2 == 3:
   print("still doesnt end well I will finnish there for your sanity")
 Player.StatsManager.damage_player("health", -15)
@@ -260,16 +265,19 @@ what would ytou like to do ?
 2.) wait for the terminator to find you
 3.) run as far as you can
 """)
+
 if lvl2_choice == 1:
   print("yeah, you find him and you get sent back home to mum in a jam jar")
   Player.StatsManager.damage_player("health", -25.5)
   print(Player.StatsManager.get_stat("health"))
   clear()
+  
 elif lvl2_choice == 2:
   print("yeah still not gonna end well")
   Player.StatsManager.damage_player("health", -20)
   print(Player.StatsManager.get_stat("health"))
   clear()
+  
 elif lvl2_choice == 3:
   print("welldone",username,"you go to your secret hideout.")
   Player.StatsManager.update_stat("health", +5)
@@ -284,31 +292,39 @@ would you like to :
 2.) stay there and hope for the best
 3.) check your supplies
 """)
+
 if ybot == 1:
   print("well done",username,"you have chosen the best option")
+  
 elif ybot == 2:
   print("yeah not the best option as he finds you and ends you and your team")
   Player.StatsManager.damage_player("health", -26)
   print(Player.StatsManager.get_stat("health"))
   clear()
+  
 elif ybot == 3:
   print("your supplies are full and perfect!")
 clear()
+
 print("""
 you have gathered a team who all want the same as you and you gather your suplies and make for the chopper
 """)
 clear()
+
 erm = input("""you have gathered your supplies and headed to previous terminator strikes to see what kind of machine you are up against what would you like to do ?
 1.) record all the data and then plan an attack from this information 
 2.) record the information and try and intercept his next attack
 3.) record how he attcks and try and find his weaknesess 
 """)
+
 if erm == "1":
   print("good choice",username,)
+  
 elif erm == "2":
   print("yeah thats not gonna work he interceps your attack on his attack")
   Player.StatsManager.damage_player("health", -15)
   print(Player.StatsManager.get_stat("health"))
+  
 elif erm == "3":
   print("yeah you find no weakneses")
 Player.statsmanager.update_stats("moral", - 10)
@@ -319,11 +335,10 @@ next_32 = input("""so you have recorded some information on the new generation o
 1.) bring the old genration of terminator who has been sent back in time to protect you
 2.) go there and confrount him try and take him on a 1V1
 3.) kiss your arse goodbye !
-
 """)
+
 if next_32 == "1":
   print("im affraid tht you find he is a polymorphic one ")
-
   Player.statsmanager.update_stats("moral", - 23)
   print(Player.statsmanager.get_stat("moral"))
 
@@ -331,16 +346,19 @@ elif next_32 == "2":
   print("yh you might as well kiss your arse goodbye at this point there no coming back!")
   Player.StatsManager.damage_player("health", -26)
   print(Player.statsmanager.get_stat("moral"))
+  
 elif next_32 == "3":
   print("I like your thinking you may survive this round ")
   Player.StatsManager.update_stat("health", + 26)
 print(Player.StatsManager.get_stat("health"))
 clear()
+
 tbyo = input("""
 so you have found out that the new veriant is polymorthic and your terminator is not as efficant as the new one you see the t-800 terminator get uppercutted half way accros the parcking lot by the t-1000 what would ypu like to do ?
 1.) use the shotgun to try and take it down 
 2.) hop back into the truck that you got here in and drive away 
 """)
+
 if tbyo == "1":
   print(" you first shoot it in the sholder and allthought you hit and you are able to see staright through the t-1000 remorfs its self to be complete ")
   Player.statsmanager.update_stats("moral", - 32)
@@ -369,10 +387,12 @@ the T-1000 is now chasing you in a stolen helicopter would you like to
 2.) lose him by chucking a few uie's
 3.) other
 """)
+
 if feedback == "1":
   print("you satrt to drive away but you find thata the T-1000 is right on your tail")
   Player.statmanager.update_stats("moral", -36)
   print(Player.statmanager.get_stat("moral"))
+  
 elif feedback == "2":
   print("you chuck a few uie's you magange to lose him but for how long")
 Player.statmanager.update_stats("moral", +12)
@@ -389,47 +409,57 @@ You do not have enogut fule to last you the journey ahead of you. You can either
 1.) hijack another vechile 
 2.) get some petrol 
 """)
+
 if fule_crisis == "1":
   print("well done you have hijack a different veichle yuou have checked it over and chosen this one precisedly for its blending in ability, but you feel a little guilty about stealing the veichle evenought its a life or death situation so you leave you veichle where your new vechle was just parked")
   Player.statsmanager.update_stats("moral", - 12)
   print(Player.statsmanager.get_stat("moral")) 
   sleep(12)
   clear()
+  
 elif fule_crisis == "2":
   print("you have a dilema ahead of you.")
   sleep(10)
+  
 fule_crisis_part2=input("""
   now you have decided to go and get some petrol witch seems like the better sulution but are yuou going to pay for your fule or are you going top steal the fule ?
   1.) steal
   2.) pay
   3.) pay a subsadised amount. 
   """)
+
 if fule_crisis_part2 == "1":
   print("you have stolen the fule and drive off but you are feeling a little guilty about stealing all that fule especialy in such an econimical crisis.")
   Player.statsmanager.update_stats("moral", - 20)
   print(Player.statsmanager.get_stat("moral"))
+  
 elif fule_crisis_part2 == "2": 
   print("you have decided to the moraly correct decicion and pay for your fule.")
   Player.statsmanager.update_stats("moral",+3)
   print(Player.statsmanager.get_stat("moral"))
+  
 elif fule_crisis_part2 == "2":
   print("you have decided to pay a subsadised amount for your fule you didnt want to steal the fule but also you didnt realy want to waste that much money on fule.")
 Player.statsmanager.update_stats("moral",-13)
 print(Player.statsmanager.get_stat("moral"))
 sleep(10)
 clear()
+
 variable_name = input("""
 so you now you have sorted out the minor life or death crisis you are now needing a place to sleep what would you like to do
 1.) stay at the nearest hotel
 2.) sleep in the car 
 3.) bunk at the nearest hotel
 """)
+
 if variable_name == "1":
   print("you have decided to stay at the nearest hotel and sleep there for the night.")
+  
 elif variable_name == "2":
   print("you have chosen to save money and sleep in the car and take shifts watching out fo the T-1000")
   Player.satmanager.update_stats("moral", - 13)
   print(Player.statsmanager.get_stat("moral"))
+  
 elif variable_name == "3":
   print("you have decided to use a hotel room and not pay")
   Player.statsmanager.update_stats("moral", -25)
@@ -447,14 +477,17 @@ you have been awoken, you have now gotten up and dresd as well as done all the n
 2.) hop in the car and get going 
 3.) head to the nearest town and grab some supplies 
 """)
+
 if Mr_Arthur == "1":
   print("you decide to edge your bets and stay here im affraid the T-1000 finds you and it doesnt end well")
   Player.statsmanager.update_stats("health -12") 
   print(Player.statsmanager.get_stat("health"))
+  
 elif Mr_Arthur == "2":
   print("you have decided to hop in a car  and get going to see where the jerney would take you next you have escaped the T-1000 for now")
   Player.statsmanager.update_stats("moral", +5)
   print(Player.statsmanager.get_stat("moral")) 
+  
 elif Mr_Arthur == "3":
   print("you have decided to go to the nearest town and get some suplies but im am affraid you have gathered the supplied but the T-1000 has found you and made you skull byeconcave")
   Player.statsmanager.update_stats("health -12") 
@@ -467,10 +500,12 @@ There is a fork in the road, no street signs to tell you which fork does what, w
 1.) right
 2.) left
 """)
+
 if Mr_johnson == '1':
     print("im affraid you have chosen the right option")
 Player.statsmanager.update_stats("moral", +2.5)
 print(Player.statsmanager.get_stat("moral")) 
+
 else:
   print("im affraid you have chosen thew wrong option and the T-1000 has found you!")
 Player.statsmanager.update_stats("health -15") 
@@ -485,12 +520,14 @@ you are feeling rather hungry and tiered you can either:
 2.) you can take shifts to look after you your mum and the T-100 you will each take turns to sleep and then rotate to be on guard. 
 what will you chose 1 or 2 ?
 """)
+
 if Mr_christian == '1':
     print("you have chosen the comfortable option, it has paid off well")
 Player.statsmanager.update_stats("health +22")
 print(Player.statsmanager.get_stat("health")) 
 Player.statsmanager.update_stats("moral +2")
 print(Player.statsmanager.get_stat("moral")) 
+
 else:
     print("im affraid you have chsen the wrong option and you oversleep and the T-1000 finds you")
 Player.statsmanager.update_stats("health -26") 
@@ -510,17 +547,20 @@ What would you like to do ?
 3.) Knock them unconscious and run.
 your answer: 
 """)
+
 if Mr_Warwick == '1':
   print("You have chosen to ignore your gut feeling and trust them",time.sleep(5),"it doesn't work out they knock you out unconscious and robe you of all your belongings")
   Player.statsmanager.update_stats("health -26") 
 print(Player.statsmanager.get_stat("health"))
 Player.statsmanager.update_stats("moral -13")
 print(Player.statsmanager.get_stat("moral"))
+
 elif Mr_Warwick == '2':
   print("you have decided to not trust them well done," username,"you have chosen the correct option but they still chase after you claming they can help")
 Player.statsmanager.update_stats("moral -3.25")
 print(Player.statsmanager.get_stat("moral"))
 clear()
+
 elif Mr_Warwick == '3':
   print("well done,"username,"you knock the sucker out unconscious and you breake his nose while doing so as a result you have hurt your hand but it is worth it as you gain some cash.")
 Player.statsmanager.update_stats("health -5") 
@@ -528,10 +568,12 @@ print(Player.statsmanager.get_stat("health"))
 Player.statsmanager.update_stats("moral +23")
 print(Player.statsmanager.get_stat("moral"))
 clear()
+
 Mrs_Hatter= ("""your body has produced some adrenalin and you want to shout something do you shout
 1.) yippie ki aye mother f***er
 2.) cowabunga
 """)
+
 print("some parts of this code was made by @Tobezdev I take no credit for those bits of code") 
 print("Help me Toby wan Kenobi your my only hope")
 print("if you understand the majority of the quote you have had a priviliged life!") 
