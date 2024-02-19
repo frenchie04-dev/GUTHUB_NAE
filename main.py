@@ -54,10 +54,9 @@ print (" your moral is now", Player.StatsManager.get_stat("moral"))
 
 if Player.satsmanager.get_stat("health") <1:
   print(col.RED + "I am affraid you have died!")
-exit()
+
 if Player.statsmanager.get_stat("moral") < 1: 
     print(col.RED +"I'm afraid you have run out of moral and you have subsequently dies as a reslut!")
-exit()
 
 White = "\033[0;37m"  
 Orange = "\033[0;33m"
