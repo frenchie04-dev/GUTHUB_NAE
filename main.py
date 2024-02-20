@@ -45,8 +45,6 @@ class Player():
       elif difficulty == 9:
         Player.StatsManager.update_stat("health", (atk))
 
-
-
 health = 100000
 moral = 100      
 print("your health is now", Player.StatsManager.get_stat("health"))
