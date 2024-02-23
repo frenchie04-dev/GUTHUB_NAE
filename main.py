@@ -567,11 +567,22 @@ Player.statsmanager.update_stats("moral +23")
 print(Player.statsmanager.get_stat("moral"))
 clear()
 
-Mrs_Hatter= ("""your body has produced some adrenalin and you want to shout something do you shout
-1.) yippie ki aye mother f***er
-2.) cowabunga
+Mrs_Hatter= input("""
+you have managed to escape the police by some miricale what would you like to do now?
+1.) take yourself in
+2.) go and do some more crazy shit
+3.) go home and rest
 """)
+
+elif Mrs_Hatter == '1':
+  print("you have decided to do the moraly correct option but they just reject you and send you home")
+Player.statsmanager.update_stats("moral +3.145")
+print(Player.statsmanager.get_stat("moral"))
+
+elif Mrs_Hatter == '2':
+  print("you have chosen the more reclace and fun option, ")
 
 print("some parts of this code was made by @Tobezdev I take no credit for those bits of code") 
 print("Help me Toby wan Kenobi your my only hope")
 print("if you understand the majority of the quote you have had a priviliged life!") 
+exit()
