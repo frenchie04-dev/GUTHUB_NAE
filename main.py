@@ -581,7 +581,39 @@ print(Player.statsmanager.get_stat("moral"))
 
 elif Mrs_Hatter == '2':
   print("you have chosen the more reclace and fun option, ")
+Player.statsmanager.update_stats("moral *2 ")
+print(Player.statsmanager.get_stat("moral"))
 
+elif Mrs_Hatter == '3':
+  print("you have decided to go home and be boring")
+Player.statsmanger.update_Stats("moral -23)
+print(Player.statsmanager.get_stat("moral")
+clear()
+
+Mini_Mr_Christian = input("""whilst you arde trying not to stay in one place for too long you get an idea to go to skyet its self to see if you can shut it down from the source you end up at a milatry base some how the T-100 has located and mannaged to smuggle you in.
+what would you like to do? 
+1.) steel a plane and go to sky net. 
+2.) yoink a plane and do a coupkle doughtnuts. 
+3.) turn arround and drive there yourself.
+""")
+
+if Mini_Mr_Christian == '1':    
+  print("you have chosen to do the reclase option, but never the less it is the correct option")
+Player.statsmanager.update_Stats("moral + 12")
+print(Player.statsmanager.get_Stat("moral")
+
+elif Mini_Mr_Christian == '2':
+  print("you have decided to hijack a miltary grade plane and do some doughnuts, the pepple on site notice you and quesation you. you are then forced to take off and go to sky net")
+  print("your the doughnut")
+Player.statsmanager.update_Stats("moral - 26")
+print(Player.statsmanager.get_Stat("moral")
+
+elif Mini_Mr_Christian == '3':
+  print("stupid bozo")
+player.statsmanager.update_Stats("moral - 12000")
+print(player.statsmanager.get_Stats("moral")
+clear()
+      
 print("some parts of this code was made by @Tobezdev I take no credit for those bits of code") 
 print("Help me Toby wan Kenobi your my only hope")
 print("if you understand the majority of the quote you have had a priviliged life!") 
