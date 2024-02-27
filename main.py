@@ -614,6 +614,25 @@ player.statsmanager.update_Stats("moral - 12000")
 print(player.statsmanager.get_Stats("moral")
 clear()
       
+phoebe = input("""you reach skynet's runway but you find the door is locked to enter skynet.
+do you get the T-100 to rip a hole in the door 
+kamakazee the plane into the door 
+look in the plane and see if anything is there that you can use 
+""")
+
+lizz =input("""
+you find your way in and see that its basicaly full of conputers that don't work.
+1.) do you try to go back home 
+2.) look for the data room
+3.) try and diasble the computers. 
+""")
+
+padre == input("""you have turned on the switch and you check the data 
+do you 
+1.) make a coppy of the data then decativate the terminators
+2.) erase asll the data and blow it to smitheranes 
+""")
+
 print("some parts of this code was made by @Tobezdev I take no credit for those bits of code") 
 print("Help me Toby wan Kenobi your my only hope")
 print("if you understand the majority of the quote you have had a priviliged life!") 
