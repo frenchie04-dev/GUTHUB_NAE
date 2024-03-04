@@ -615,11 +615,18 @@ print(player.statsmanager.get_Stats("moral")
 clear()
       
 phoebe = input("""you reach skynet's runway but you find the door is locked to enter skynet.
-do you get the T-100 to rip a hole in the door 
-kamakazee the plane into the door 
-look in the plane and see if anything is there that you can use 
+1.) do you get the T-100 to rip a hole in the door 
+2.) kamakazee the plane into the door 
+3.) look in the plane and see if anything is there that you can use 
 """)
 
+if phoebe ==  '1':
+  print("you try and get the T-100 to rip a hold in the door but no luck") 
+player.statsmanager.update_Stats("moral - 120")
+print(player.statsmanager.get_Stats("moral")
+
+elif phoebe == '2':
+  print("you get the T-100 to kamikaze the door but the plane end up becoming flat like it would in the cartoons.")
 lizz =input("""
 you find your way in and see that its basicaly full of conputers that don't work.
 1.) do you try to go back home 
